@@ -76,7 +76,7 @@ The sequence and its length are defined using parameters.
 #### parameter [N-1:0] SEQ = 4'b1011;
 
 <p align="center">
-<img src="images/codesnippetsr.png" width= "500">
+<img src="assets/images/codesnippetsr.png" width= "500">
 </p>
 This allows detecting different sequences without modifying the RTL code.
 Example:
@@ -107,7 +107,7 @@ This ensures the detection signal is asserted in the correct clock cycle.
 
 Example waveform:
 <p align="center">
-<img src="images/waveformshiftreg.png" width= "700">
+<img src="assets/images/waveformshiftreg.png" width= "700">
 </p>
 The design was verified using QuestaSim.
 
