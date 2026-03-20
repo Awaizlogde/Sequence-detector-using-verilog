@@ -37,7 +37,7 @@ S3 : Detected 101
 S4 : Sequence 1011 detected
 
 ## Output
-![waveform fsm](images/waveform_fsm.png)
+![waveform fsm](images/waveformfsm.png)
 
 #### Limitation
 *FSM implementations are sequence-specific.*
@@ -70,6 +70,8 @@ The sequence and its length are defined using parameters.
 #### Example:
 #### parameter N = 4;
 #### parameter [N-1:0] SEQ = 4'b1011;
+
+![cadesnippetsr](images/codesnippetsr.png)
 
 This allows detecting different sequences without modifying the RTL code.
 Example:
