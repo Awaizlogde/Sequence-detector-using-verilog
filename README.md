@@ -1,7 +1,7 @@
 # Parameterized Sequence Detector (Verilog RTL)
 
 ## Overview
-This project implements a **Sequence Detector in Verilog and explores two design approaches:
+This project implements a **Sequence Detector in Verilog** and explores two design approaches:
 
 **1) FSM-based Sequence Detector (Moore/Mealy)**
 
