@@ -36,8 +36,12 @@ S3 : Detected 101
 
 S4 : Sequence 1011 detected
 
-## Output
-![waveform fsm](images/waveformfsm.png)
+## Output simulation of fsm
+
+<p align="center">
+<img src="images/waveformfsm.png" width= "700">
+</p>
+
 
 #### Limitation
 *FSM implementations are sequence-specific.*
@@ -71,8 +75,9 @@ The sequence and its length are defined using parameters.
 #### parameter N = 4;
 #### parameter [N-1:0] SEQ = 4'b1011;
 
-![cadesnippetsr](images/codesnippetsr.png)
-
+<p align="center">
+<img src="images/codesnippetsr.png" width= "500">
+</p>
 This allows detecting different sequences without modifying the RTL code.
 Example:
 
@@ -87,16 +92,23 @@ SEQ = 0110
 During simulation, a one clock cycle delay in detection was observed.
 This occurs because non-blocking assignments (<=) update registers after the clock edge, so the comparator uses the previous value of the shift register.
 
-### Solution
+### Solution:
 Instead of comparing:
+
 *shift_reg == SEQ*
+
 The design compares the next shift register value:
+
 *{shift_reg[N-2:0], data_in} == SEQ*
 
 This ensures the detection signal is asserted in the correct clock cycle.
 
-Simulation
+### Output Simulation of shift_reg
 
+Example waveform:
+<p align="center">
+<img src="images/waveformshiftreg.png" width= "700">
+</p>
 The design was verified using QuestaSim.
 
 Observed signals:
@@ -105,22 +117,23 @@ data_in
 shift_reg
 detected
 
-Example waveform:
-
-
-
 
 ## Tools Used:
+
 *1) Verilog HDL*
+
 *2) QuestaSim*
 
 ### Future Improvements
 Possible extensions: Overlapping vs Non-overlapping sequence detection
+
 Detection of multiple sequences
+
 SystemVerilog testbench
+
 Functional coverage
 
-Author
-### Awaiz Logde
-### M.Tech Semiconductor Chip Design
-### RTL Design / Digital Design
+### Author
+#### Awaiz Logde
+#### M.Tech Semiconductor Chip Design
+#### RTL Design / Digital Design
