@@ -34,7 +34,10 @@ S2 : Detected 10
 
 S3 : Detected 101
 
-S4 : Sequence detected
+S4 : Sequence 1011 detected
+
+## Output
+![waveform fsm](images/waveform_fsm.png)
 
 #### Limitation
 *FSM implementations are sequence-specific.*
