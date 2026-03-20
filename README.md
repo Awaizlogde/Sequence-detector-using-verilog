@@ -39,7 +39,7 @@ S4 : Sequence 1011 detected
 ## Output simulation of fsm
 
 <p align="center">
-<img src="images/waveformfsm.png" width= "700">
+<img src="assets/images/waveformfsm.png" width= "700">
 </p>
 
 
