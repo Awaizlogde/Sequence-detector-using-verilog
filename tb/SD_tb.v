@@ -24,7 +24,8 @@ clk = 0;
 forever #5 clk = ~clk;
 end
 
-// Task ? send bits MSB first
+// Task can be implemented to send bits (not required in this case)
+  
 /*task send_bits;
 input [15:0] seq;
 input integer len;
